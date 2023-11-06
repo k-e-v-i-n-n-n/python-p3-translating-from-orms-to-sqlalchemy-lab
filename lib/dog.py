@@ -27,11 +27,10 @@ def save(session, dog):
 
 def get_all(session):
     return session.query(Dog).all()
-    
 
 
 def find_by_name(session, name):
-    pass
+   return session.query(Dog).filter(Dog.name == name).first()
 
 def find_by_id(session, id):
     pass
